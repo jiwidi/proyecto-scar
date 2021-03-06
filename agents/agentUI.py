@@ -1,12 +1,13 @@
 import spade
 import time
+import json
 
 class AgenteEnv(spade.agent.Agent):
 
     async def setup(self):
-        self.add_behaviour(self.EnviarBehaviour())
-        template = spade.template.Template(metadata={"performative": "PUSH"})
-        self.add_behaviour(self.RecvBehaviour(), template)
+            self.add_behaviour(self.EnviarBehaviour())
+            template = spade.template.Template(metadata={"performative": "PUSH"})
+            self.add_behaviour(self.RecvBehaviour(), template)
 
     class EnviarBehaviour(spade.behaviour.OneShotBehaviour):
 
