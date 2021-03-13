@@ -1,270 +1,416 @@
-Prefix(:=<http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5#>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5">
+    <Prefix name="" IRI="http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Genre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Movie"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tag"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#asociadaConPelicula"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#calificaA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#creadaPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dirigidaPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#esCalificadaPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#esGeneroDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#etiquetaAsociada"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haCalificado"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haCreadoEtiqueta"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haDirigido"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#starring"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#starringIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneCalificacion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneGenero"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#abstract"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sinopsis"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Action"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Adventure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Animation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Comedy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Crime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Documentary"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Drama"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fantasy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Film-Noir"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Horror"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Musical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mystery"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NoGenre"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Romance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sci-Fi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Thriller"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#War"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Western"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Children&apos;s"/>
+    </Declaration>
+    <DisjointClasses>
+        <Class IRI="#Genre"/>
+        <Class IRI="#Movie"/>
+        <Class IRI="#Person"/>
+        <Class IRI="#Rating"/>
+        <Class IRI="#Tag"/>
+        <Class IRI="#User"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Action"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Adventure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Animation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Comedy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Crime"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Documentary"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Drama"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Fantasy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Film-Noir"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Horror"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Musical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Mystery"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#NoGenre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Romance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Sci-Fi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Thriller"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#War"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Western"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Genre"/>
+        <NamedIndividual IRI="#Children&apos;s"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#esGeneroDe"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#asociadaConPelicula"/>
+        <ObjectProperty IRI="#etiquetaAsociada"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#calificaA"/>
+        <ObjectProperty IRI="#tieneCalificacion"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#creadaPor"/>
+        <ObjectProperty IRI="#haCreadoEtiqueta"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#dirigidaPor"/>
+        <ObjectProperty IRI="#haDirigido"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#esCalificadaPor"/>
+        <ObjectProperty IRI="#haCalificado"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#esGeneroDe"/>
+        <ObjectProperty IRI="#tieneGenero"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#starring"/>
+        <ObjectProperty IRI="#starringIn"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#haCalificado"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#asociadaConPelicula"/>
+        <Class IRI="#Tag"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#calificaA"/>
+        <Class IRI="#Rating"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#creadaPor"/>
+        <Class IRI="#Tag"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#dirigidaPor"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#esCalificadaPor"/>
+        <Class IRI="#Rating"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#esGeneroDe"/>
+        <Class IRI="#Genre"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#etiquetaAsociada"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#haCalificado"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#haCreadoEtiqueta"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#haDirigido"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#starring"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#starringIn"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneCalificacion"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneGenero"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#asociadaConPelicula"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#calificaA"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#creadaPor"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#dirigidaPor"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#esCalificadaPor"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#esGeneroDe"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#etiquetaAsociada"/>
+        <Class IRI="#Tag"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haCalificado"/>
+        <Class IRI="#Rating"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haCreadoEtiqueta"/>
+        <Class IRI="#Tag"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haDirigido"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#starring"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#starringIn"/>
+        <Class IRI="#Movie"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneCalificacion"/>
+        <Class IRI="#Rating"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneGenero"/>
+        <Class IRI="#Genre"/>
+    </ObjectPropertyRange>
+    <EquivalentDataProperties>
+        <DataProperty IRI="#abstract"/>
+        <DataProperty IRI="#sinopsis"/>
+    </EquivalentDataProperties>
+    <DataPropertyDomain>
+        <DataProperty IRI="#abstract"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sinopsis"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#title"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#year"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#abstract"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sinopsis"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#year"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
-
-Ontology(<http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5>
-
-Declaration(Class(:Genre))
-Declaration(Class(:Movie))
-Declaration(Class(:Person))
-Declaration(Class(:Rating))
-Declaration(Class(:Tag))
-Declaration(Class(:User))
-Declaration(ObjectProperty(:asociadaConPelicula))
-Declaration(ObjectProperty(:calificaA))
-Declaration(ObjectProperty(:creadaPor))
-Declaration(ObjectProperty(:dirigidaPor))
-Declaration(ObjectProperty(:esCalificadaPor))
-Declaration(ObjectProperty(:esGeneroDe))
-Declaration(ObjectProperty(:etiquetaAsociada))
-Declaration(ObjectProperty(:haCalificado))
-Declaration(ObjectProperty(:haCreadoEtiqueta))
-Declaration(ObjectProperty(:haDirigido))
-Declaration(ObjectProperty(:starring))
-Declaration(ObjectProperty(:starringIn))
-Declaration(ObjectProperty(:tieneCalificacion))
-Declaration(ObjectProperty(:tieneGenero))
-Declaration(DataProperty(:abstract))
-Declaration(DataProperty(:sinopsis))
-Declaration(DataProperty(:title))
-Declaration(DataProperty(:year))
-Declaration(NamedIndividual(:Action))
-Declaration(NamedIndividual(:Adventure))
-Declaration(NamedIndividual(:Animation))
-Declaration(NamedIndividual(:Comedy))
-Declaration(NamedIndividual(:Crime))
-Declaration(NamedIndividual(:Documentary))
-Declaration(NamedIndividual(:Drama))
-Declaration(NamedIndividual(:Fantasy))
-Declaration(NamedIndividual(:Film-Noir))
-Declaration(NamedIndividual(:Horror))
-Declaration(NamedIndividual(:Musical))
-Declaration(NamedIndividual(:Mystery))
-Declaration(NamedIndividual(:NoGenre))
-Declaration(NamedIndividual(:Romance))
-Declaration(NamedIndividual(:Sci-Fi))
-Declaration(NamedIndividual(:Thriller))
-Declaration(NamedIndividual(:War))
-Declaration(NamedIndividual(:Western))
-Declaration(NamedIndividual(<http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5#Children's>))
-############################
-#   Object Properties
-############################
-
-# Object Property: :asociadaConPelicula (:asociadaConPelicula)
-
-InverseObjectProperties(:asociadaConPelicula :etiquetaAsociada)
-ObjectPropertyDomain(:asociadaConPelicula :Tag)
-ObjectPropertyRange(:asociadaConPelicula :Movie)
-
-# Object Property: :calificaA (:calificaA)
-
-InverseObjectProperties(:calificaA :tieneCalificacion)
-ObjectPropertyDomain(:calificaA :Rating)
-ObjectPropertyRange(:calificaA :Movie)
-
-# Object Property: :creadaPor (:creadaPor)
-
-InverseObjectProperties(:creadaPor :haCreadoEtiqueta)
-ObjectPropertyDomain(:creadaPor :Tag)
-ObjectPropertyRange(:creadaPor :User)
-
-# Object Property: :dirigidaPor (:dirigidaPor)
-
-InverseObjectProperties(:dirigidaPor :haDirigido)
-ObjectPropertyDomain(:dirigidaPor :Movie)
-ObjectPropertyRange(:dirigidaPor :Person)
-
-# Object Property: :esCalificadaPor (:esCalificadaPor)
-
-InverseObjectProperties(:esCalificadaPor :haCalificado)
-ObjectPropertyDomain(:esCalificadaPor :Rating)
-ObjectPropertyRange(:esCalificadaPor :User)
-
-# Object Property: :esGeneroDe (:esGeneroDe)
-
-SubObjectPropertyOf(:esGeneroDe owl:topObjectProperty)
-InverseObjectProperties(:esGeneroDe :tieneGenero)
-ObjectPropertyDomain(:esGeneroDe :Genre)
-ObjectPropertyRange(:esGeneroDe :Movie)
-
-# Object Property: :etiquetaAsociada (:etiquetaAsociada)
-
-ObjectPropertyDomain(:etiquetaAsociada :Movie)
-ObjectPropertyRange(:etiquetaAsociada :Tag)
-
-# Object Property: :haCalificado (:haCalificado)
-
-FunctionalObjectProperty(:haCalificado)
-ObjectPropertyDomain(:haCalificado :User)
-ObjectPropertyRange(:haCalificado :Rating)
-
-# Object Property: :haCreadoEtiqueta (:haCreadoEtiqueta)
-
-ObjectPropertyDomain(:haCreadoEtiqueta :User)
-ObjectPropertyRange(:haCreadoEtiqueta :Tag)
-
-# Object Property: :haDirigido (:haDirigido)
-
-ObjectPropertyDomain(:haDirigido :Person)
-ObjectPropertyRange(:haDirigido :Movie)
-
-# Object Property: :starring (:starring)
-
-InverseObjectProperties(:starring :starringIn)
-ObjectPropertyDomain(:starring :Movie)
-ObjectPropertyRange(:starring :Person)
-
-# Object Property: :starringIn (:starringIn)
-
-ObjectPropertyDomain(:starringIn :Person)
-ObjectPropertyRange(:starringIn :Movie)
-
-# Object Property: :tieneCalificacion (:tieneCalificacion)
-
-ObjectPropertyDomain(:tieneCalificacion :Movie)
-ObjectPropertyRange(:tieneCalificacion :Rating)
-
-# Object Property: :tieneGenero (:tieneGenero)
-
-ObjectPropertyDomain(:tieneGenero :Movie)
-ObjectPropertyRange(:tieneGenero :Genre)
-
-
-############################
-#   Data Properties
-############################
-
-# Data Property: :abstract (:abstract)
-
-EquivalentDataProperties(:abstract :sinopsis)
-DataPropertyDomain(:abstract :Movie)
-DataPropertyRange(:abstract xsd:string)
-
-# Data Property: :sinopsis (:sinopsis)
-
-DataPropertyDomain(:sinopsis :Movie)
-DataPropertyRange(:sinopsis xsd:string)
-
-# Data Property: :title (:title)
-
-DataPropertyDomain(:title :Movie)
-DataPropertyRange(:title xsd:string)
-
-# Data Property: :year (:year)
-
-DataPropertyDomain(:year :Movie)
-DataPropertyRange(:year xsd:int)
-
-
-
-############################
-#   Classes
-############################
-
-# Class: :Genre (:Genre)
-
-
-# Class: :Movie (:Movie)
-
-
-# Class: :Person (:Person)
-
-
-# Class: :Rating (:Rating)
-
-
-# Class: :Tag (:Tag)
-
-
-# Class: :User (:User)
-
-
-
-############################
-#   Named Individuals
-############################
-
-# Individual: :Action (:Action)
-
-ClassAssertion(:Genre :Action)
-
-# Individual: :Adventure (:Adventure)
-
-ClassAssertion(:Genre :Adventure)
-
-# Individual: :Animation (:Animation)
-
-ClassAssertion(:Genre :Animation)
-
-# Individual: :Comedy (:Comedy)
-
-ClassAssertion(:Genre :Comedy)
-
-# Individual: :Crime (:Crime)
-
-ClassAssertion(:Genre :Crime)
-
-# Individual: :Documentary (:Documentary)
-
-ClassAssertion(:Genre :Documentary)
-
-# Individual: :Drama (:Drama)
-
-ClassAssertion(:Genre :Drama)
-
-# Individual: :Fantasy (:Fantasy)
-
-ClassAssertion(:Genre :Fantasy)
-
-# Individual: :Film-Noir (:Film-Noir)
-
-ClassAssertion(:Genre :Film-Noir)
-
-# Individual: :Horror (:Horror)
-
-ClassAssertion(:Genre :Horror)
-
-# Individual: :Musical (:Musical)
-
-ClassAssertion(:Genre :Musical)
-
-# Individual: :Mystery (:Mystery)
-
-ClassAssertion(:Genre :Mystery)
-
-# Individual: :NoGenre (:NoGenre)
-
-ClassAssertion(:Genre :NoGenre)
-
-# Individual: :Romance (:Romance)
-
-ClassAssertion(:Genre :Romance)
-
-# Individual: :Sci-Fi (:Sci-Fi)
-
-ClassAssertion(:Genre :Sci-Fi)
-
-# Individual: :Thriller (:Thriller)
-
-ClassAssertion(:Genre :Thriller)
-
-# Individual: :War (:War)
-
-ClassAssertion(:Genre :War)
-
-# Individual: :Western (:Western)
-
-ClassAssertion(:Genre :Western)
-
-# Individual: <http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5#Children's> (<http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5#Children's>)
-
-ClassAssertion(:Genre <http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5#Children's>)
-
-
-DisjointClasses(:Genre :Movie :Person :Rating :Tag :User)
-)
