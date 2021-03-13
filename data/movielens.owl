@@ -1,0 +1,270 @@
+Prefix(:=<http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5>
+
+Declaration(Class(:Genre))
+Declaration(Class(:Movie))
+Declaration(Class(:Person))
+Declaration(Class(:Rating))
+Declaration(Class(:Tag))
+Declaration(Class(:User))
+Declaration(ObjectProperty(:asociadaConPelicula))
+Declaration(ObjectProperty(:calificaA))
+Declaration(ObjectProperty(:creadaPor))
+Declaration(ObjectProperty(:dirigidaPor))
+Declaration(ObjectProperty(:esCalificadaPor))
+Declaration(ObjectProperty(:esGeneroDe))
+Declaration(ObjectProperty(:etiquetaAsociada))
+Declaration(ObjectProperty(:haCalificado))
+Declaration(ObjectProperty(:haCreadoEtiqueta))
+Declaration(ObjectProperty(:haDirigido))
+Declaration(ObjectProperty(:starring))
+Declaration(ObjectProperty(:starringIn))
+Declaration(ObjectProperty(:tieneCalificacion))
+Declaration(ObjectProperty(:tieneGenero))
+Declaration(DataProperty(:abstract))
+Declaration(DataProperty(:sinopsis))
+Declaration(DataProperty(:title))
+Declaration(DataProperty(:year))
+Declaration(NamedIndividual(:Action))
+Declaration(NamedIndividual(:Adventure))
+Declaration(NamedIndividual(:Animation))
+Declaration(NamedIndividual(:Comedy))
+Declaration(NamedIndividual(:Crime))
+Declaration(NamedIndividual(:Documentary))
+Declaration(NamedIndividual(:Drama))
+Declaration(NamedIndividual(:Fantasy))
+Declaration(NamedIndividual(:Film-Noir))
+Declaration(NamedIndividual(:Horror))
+Declaration(NamedIndividual(:Musical))
+Declaration(NamedIndividual(:Mystery))
+Declaration(NamedIndividual(:NoGenre))
+Declaration(NamedIndividual(:Romance))
+Declaration(NamedIndividual(:Sci-Fi))
+Declaration(NamedIndividual(:Thriller))
+Declaration(NamedIndividual(:War))
+Declaration(NamedIndividual(:Western))
+Declaration(NamedIndividual(<http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5#Children's>))
+############################
+#   Object Properties
+############################
+
+# Object Property: :asociadaConPelicula (:asociadaConPelicula)
+
+InverseObjectProperties(:asociadaConPelicula :etiquetaAsociada)
+ObjectPropertyDomain(:asociadaConPelicula :Tag)
+ObjectPropertyRange(:asociadaConPelicula :Movie)
+
+# Object Property: :calificaA (:calificaA)
+
+InverseObjectProperties(:calificaA :tieneCalificacion)
+ObjectPropertyDomain(:calificaA :Rating)
+ObjectPropertyRange(:calificaA :Movie)
+
+# Object Property: :creadaPor (:creadaPor)
+
+InverseObjectProperties(:creadaPor :haCreadoEtiqueta)
+ObjectPropertyDomain(:creadaPor :Tag)
+ObjectPropertyRange(:creadaPor :User)
+
+# Object Property: :dirigidaPor (:dirigidaPor)
+
+InverseObjectProperties(:dirigidaPor :haDirigido)
+ObjectPropertyDomain(:dirigidaPor :Movie)
+ObjectPropertyRange(:dirigidaPor :Person)
+
+# Object Property: :esCalificadaPor (:esCalificadaPor)
+
+InverseObjectProperties(:esCalificadaPor :haCalificado)
+ObjectPropertyDomain(:esCalificadaPor :Rating)
+ObjectPropertyRange(:esCalificadaPor :User)
+
+# Object Property: :esGeneroDe (:esGeneroDe)
+
+SubObjectPropertyOf(:esGeneroDe owl:topObjectProperty)
+InverseObjectProperties(:esGeneroDe :tieneGenero)
+ObjectPropertyDomain(:esGeneroDe :Genre)
+ObjectPropertyRange(:esGeneroDe :Movie)
+
+# Object Property: :etiquetaAsociada (:etiquetaAsociada)
+
+ObjectPropertyDomain(:etiquetaAsociada :Movie)
+ObjectPropertyRange(:etiquetaAsociada :Tag)
+
+# Object Property: :haCalificado (:haCalificado)
+
+FunctionalObjectProperty(:haCalificado)
+ObjectPropertyDomain(:haCalificado :User)
+ObjectPropertyRange(:haCalificado :Rating)
+
+# Object Property: :haCreadoEtiqueta (:haCreadoEtiqueta)
+
+ObjectPropertyDomain(:haCreadoEtiqueta :User)
+ObjectPropertyRange(:haCreadoEtiqueta :Tag)
+
+# Object Property: :haDirigido (:haDirigido)
+
+ObjectPropertyDomain(:haDirigido :Person)
+ObjectPropertyRange(:haDirigido :Movie)
+
+# Object Property: :starring (:starring)
+
+InverseObjectProperties(:starring :starringIn)
+ObjectPropertyDomain(:starring :Movie)
+ObjectPropertyRange(:starring :Person)
+
+# Object Property: :starringIn (:starringIn)
+
+ObjectPropertyDomain(:starringIn :Person)
+ObjectPropertyRange(:starringIn :Movie)
+
+# Object Property: :tieneCalificacion (:tieneCalificacion)
+
+ObjectPropertyDomain(:tieneCalificacion :Movie)
+ObjectPropertyRange(:tieneCalificacion :Rating)
+
+# Object Property: :tieneGenero (:tieneGenero)
+
+ObjectPropertyDomain(:tieneGenero :Movie)
+ObjectPropertyRange(:tieneGenero :Genre)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :abstract (:abstract)
+
+EquivalentDataProperties(:abstract :sinopsis)
+DataPropertyDomain(:abstract :Movie)
+DataPropertyRange(:abstract xsd:string)
+
+# Data Property: :sinopsis (:sinopsis)
+
+DataPropertyDomain(:sinopsis :Movie)
+DataPropertyRange(:sinopsis xsd:string)
+
+# Data Property: :title (:title)
+
+DataPropertyDomain(:title :Movie)
+DataPropertyRange(:title xsd:string)
+
+# Data Property: :year (:year)
+
+DataPropertyDomain(:year :Movie)
+DataPropertyRange(:year xsd:int)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Genre (:Genre)
+
+
+# Class: :Movie (:Movie)
+
+
+# Class: :Person (:Person)
+
+
+# Class: :Rating (:Rating)
+
+
+# Class: :Tag (:Tag)
+
+
+# Class: :User (:User)
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Action (:Action)
+
+ClassAssertion(:Genre :Action)
+
+# Individual: :Adventure (:Adventure)
+
+ClassAssertion(:Genre :Adventure)
+
+# Individual: :Animation (:Animation)
+
+ClassAssertion(:Genre :Animation)
+
+# Individual: :Comedy (:Comedy)
+
+ClassAssertion(:Genre :Comedy)
+
+# Individual: :Crime (:Crime)
+
+ClassAssertion(:Genre :Crime)
+
+# Individual: :Documentary (:Documentary)
+
+ClassAssertion(:Genre :Documentary)
+
+# Individual: :Drama (:Drama)
+
+ClassAssertion(:Genre :Drama)
+
+# Individual: :Fantasy (:Fantasy)
+
+ClassAssertion(:Genre :Fantasy)
+
+# Individual: :Film-Noir (:Film-Noir)
+
+ClassAssertion(:Genre :Film-Noir)
+
+# Individual: :Horror (:Horror)
+
+ClassAssertion(:Genre :Horror)
+
+# Individual: :Musical (:Musical)
+
+ClassAssertion(:Genre :Musical)
+
+# Individual: :Mystery (:Mystery)
+
+ClassAssertion(:Genre :Mystery)
+
+# Individual: :NoGenre (:NoGenre)
+
+ClassAssertion(:Genre :NoGenre)
+
+# Individual: :Romance (:Romance)
+
+ClassAssertion(:Genre :Romance)
+
+# Individual: :Sci-Fi (:Sci-Fi)
+
+ClassAssertion(:Genre :Sci-Fi)
+
+# Individual: :Thriller (:Thriller)
+
+ClassAssertion(:Genre :Thriller)
+
+# Individual: :War (:War)
+
+ClassAssertion(:Genre :War)
+
+# Individual: :Western (:Western)
+
+ClassAssertion(:Genre :Western)
+
+# Individual: <http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5#Children's> (<http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5#Children's>)
+
+ClassAssertion(:Genre <http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5#Children's>)
+
+
+DisjointClasses(:Genre :Movie :Person :Rating :Tag :User)
+)
