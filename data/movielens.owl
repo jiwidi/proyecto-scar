@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5">
-    <Prefix name="" IRI="http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5#"/>
+    <Prefix name="" IRI="http://www.semanticweb.org/raúl/ontologies/2021/2/untitled-ontology-5"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -76,7 +76,13 @@
         <DataProperty IRI="#abstract"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#ratingValue"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#sinopsis"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tagValue"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#title"/>
@@ -381,8 +387,16 @@
         <Class IRI="#Movie"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#ratingValue"/>
+        <Class IRI="#Rating"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#sinopsis"/>
         <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tagValue"/>
+        <Class IRI="#Tag"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#title"/>
@@ -397,7 +411,15 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#ratingValue"/>
+        <Datatype abbreviatedIRI="owl:real"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#sinopsis"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tagValue"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
