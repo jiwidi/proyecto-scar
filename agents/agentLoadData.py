@@ -67,12 +67,16 @@ class LoadDataAgent(spade.agent.Agent):
             await self.agent.stop()
 
     
-def print_instances(entity_type):
+def print_instances(entity_type, limit):
+    i = 0
     for instance in entity_type.instances():
         print(instance.name)
         for prop in instance.get_properties():
             for value in prop[instance]:
                 print("> %s == %s" % (prop.python_name, value))
+        i += 1
+        if i == limit:
+            break
 
 
 if __name__ == '__main__':
