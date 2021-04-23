@@ -76,7 +76,16 @@
         <DataProperty IRI="#abstract"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#job"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#ratingValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sex"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#sinopsis"/>
@@ -263,9 +272,6 @@
         <ObjectProperty IRI="#starring"/>
         <ObjectProperty IRI="#starringIn"/>
     </InverseObjectProperties>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#haCalificado"/>
-    </FunctionalObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#asociadaConPelicula"/>
         <Class IRI="#Tag"/>
@@ -387,8 +393,20 @@
         <Class IRI="#Movie"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#age"/>
+        <Class IRI="#User"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#job"/>
+        <Class IRI="#User"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#ratingValue"/>
         <Class IRI="#Rating"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sex"/>
+        <Class IRI="#User"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#sinopsis"/>
@@ -411,8 +429,20 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#age"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#job"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#ratingValue"/>
         <Datatype abbreviatedIRI="owl:real"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sex"/>
+        <Datatype abbreviatedIRI="xsd:token"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#sinopsis"/>
